@@ -15,6 +15,9 @@
       <li class="nav-item">
         <a class="nav-link" href="{{route('posts.aggregation')}}">Aggrgation with posts</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('users.top')}}">Top users</a>
+      </li>
     </ul>
   </div>
 </nav>
