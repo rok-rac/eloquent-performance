@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index() {
-        $posts = Post::with('user')->get();
+        $posts = Post::select('title','user_id')->with('user:id,name,email')->get();
         return view('posts.index', compact('posts'));
     }
 }
