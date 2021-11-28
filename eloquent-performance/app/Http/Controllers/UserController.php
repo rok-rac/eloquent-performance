@@ -12,5 +12,4 @@ class UserController extends Controller
         $users = User::select('name')->withCount('posts')->get();
         return view('users.index',compact('users'));
     }
-
 }

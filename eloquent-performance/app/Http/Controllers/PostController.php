@@ -11,4 +11,13 @@ class PostController extends Controller
         $posts = Post::select('title','user_id')->with('user:id,name,email')->get();
         return view('posts.index', compact('posts'));
     }
+
+    public function aggregationWithPosts() {
+        $posts = Post::select('title')->withCount('ratings')
+        ->withAvg('ratings','rating')
+        ->withMax('ratings','rating')
+        ->withMin('ratings','rating')
+        ->get();
+        return view('posts.aggregation',compact('posts'));
+    }
 }

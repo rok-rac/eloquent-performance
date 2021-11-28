@@ -17,3 +17,4 @@ Route::get('/', [\App\Http\Controllers\PostController::class, 'index'])->name('p
 
 Route::get('/users', [\App\Http\Controllers\UserController::class, 'index'])->name('users.home');
 
+Route::get('/aggregation', [\App\Http\Controllers\PostController::class, 'aggregationWithPosts'])->name('posts.aggregation');
